@@ -1,0 +1,175 @@
+@mixin media-max-width-mobile {
+  @media (max-width: $mobile) { @content; }
+}
+
+@mixin media-max-width-padmini {
+  @media (max-width: $padmini) { @content; }
+}
+
+@mixin media-max-width-pad {
+  @media (max-width: $pad) { @content; }
+}
+
+@mixin media-max-width-laptop {
+  @media (max-width: $laptop) { @content; }
+}
+
+//@mixin placeholder {
+//  &::-webkit-input-placeholder { @content; }
+//  &:-moz-placeholder           { @content; }
+//  &::-moz-placeholder          { @content; }
+//  &:-ms-input-placeholder      { @content; }
+//}
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &_#{$modifier} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  @include element($element) {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  @include modifier($modifier) {
+    @content;
+  }
+}
+
+@mixin typography-variant-heading1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+
+  @include media-max-width-pad {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include media-max-width-mobile {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin typography-variant-heading2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+@mixin typography-variant-heading3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin typography-variant-heading4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@mixin typography-variant-body {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+}
+
+@mixin typography-variant-body2 {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+
+}
+
+@mixin typography-variant-body3 {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+}
+@mixin typography-caption {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+}
+
+@mixin  typography-variant-white-color {
+  color: #ffffff;
+}
+
+@mixin typography-variant-text-bold {
+  font-weight: bold;
+}
+@mixin typography-variant-text-align {
+  text-align: justify;
+}
+@mixin typography-variant-text-center {
+  text-align: center;
+}
+
+@mixin typography-variant-bread {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $green;
+
+  @include media-max-width-mobile {
+    line-height: 22px;
+  }
+}
+
+//____________________________________________________________
+
+@mixin typography($variant) {
+  @if $variant == h1 {
+    @include typography-variant-heading1;
+  } @else if $variant == h2 {
+    @include typography-variant-heading2;
+  } @else if $variant == h3 {
+    @include typography-variant-heading3;
+  } @else if $variant == h4 {
+    @include typography-variant-heading4;
+  } @else if $variant == body {
+    @include typography-variant-body;
+  } @else if $variant == body2 {
+    @include typography-variant-body2;
+  } @else if $variant == body3 {
+    @include typography-variant-body3;
+  }  @else if $variant == caption {
+    @include typography-caption;
+  } @else if $variant == text-align {
+    @include typography-variant-text-align;
+  } @else if $variant == text-center {
+    @include typography-variant-text-center;
+  } @else if $variant == bread {
+    @include typography-variant-bread;
+  }
+
+}
+

@@ -1,0 +1,62 @@
+.how-it-works {
+  background: url("./assets/images/how-it-works-bg.png") bottom / 100% no-repeat;
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    margin-bottom: 44px;
+  }
+
+  &__steps {
+    display: flex;
+    justify-content: center;
+
+    @include media-max-width-mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__steps-title {
+    margin-bottom: 24px;
+  }
+
+  &__steps-item {
+    width: 100%;
+    max-width: 336px;
+
+    @include media-max-width-padmini {
+      max-width: 208px;
+    }
+    @include media-max-width-mobile {
+      max-width: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include media-max-width-padmini {
+        margin-right: 32px;
+      }
+      @include media-max-width-mobile {
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__steps-img {
+    margin-bottom: 20px;
+  }
+}

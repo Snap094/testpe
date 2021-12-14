@@ -1,0 +1,85 @@
+.typography {
+  @include m('root') {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include m('h1') {
+    @include typography-variant-heading1;
+  }
+
+  @include m('h2') {
+    @include typography-variant-heading2;
+  }
+
+  @include m('h3') {
+    @include typography-variant-heading3;
+  }
+
+  @include m('h4') {
+    @include typography-variant-heading4;
+  }
+
+
+  @include m('body') {
+    @include typography(body)
+  }
+
+  @include m('body2') {
+    @include typography(body2)
+  }
+  @include m('body3') {
+    @include typography(body3)
+  }
+
+  @include m('caption') {
+    @include typography-caption
+  }
+
+  @include m('centred') {
+    text-align: center;
+  }
+
+  @include m('primary-medium') {
+    color: $primary-medium;
+  }
+
+  @include m('primary-dark') {
+    color: $primary-dark;
+  }
+
+  @include m('gray') {
+    color: $gray;
+  }
+
+  @include m('gray-text') {
+    color: $gray;
+  }
+
+  @include m('uppercased') {
+    text-transform: uppercase;
+  }
+
+  @include m('text-bold') {
+    @include typography-variant-text-bold
+  }
+
+  @include m('text-align') {
+    @include typography-variant-text-align
+  }
+
+  @include m('text-center') {
+    @include typography-variant-text-center
+  }
+
+
+  @include m('white') {
+    @include typography-variant-white-color
+  }
+
+  @include m('bread') {
+    @include typography-variant-bread
+  }
+
+}
+

@@ -1,0 +1,268 @@
+.footer {
+
+  &__cart {
+    display: flex;
+    svg {
+      path {
+        fill: $primary-light;
+      }
+    }
+
+    span {
+      margin-left: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #1165E6;
+      border-radius: 8px;
+      color: #fff;
+    }
+  }
+
+  &__menu-text {
+    margin-top: 4px;
+  }
+
+  &__lower-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__lower-wrap {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+  }
+
+  &__lower-inner {
+    display: flex;
+  }
+
+  &__middle-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include media-max-width-mobile {
+      order: 2;
+      width: 100%;
+      margin-top: 32px;
+    }
+  }
+
+  &__middle-image {
+    flex-shrink: 0;
+    @include media-max-width-padmini {
+      width: 112px;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    @include media-max-width-mobile {
+      order: 1;
+    }
+  }
+
+  &__lower-item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    transition: 0.2s linear;
+
+    @include media-max-width-padmini {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      p {
+        color: $dark;
+      }
+
+      svg {
+        path {
+          fill: $primary-dark;
+        }
+      }
+    }
+  }
+
+  &__middle-list-lower {
+    display: flex;
+  }
+
+  &__upper-item {
+    &:not(:last-child) {
+      margin-right: 80px;
+
+      @include media-max-width-laptop {
+        margin-right: 40px;
+      }
+      @include media-max-width-padmini {
+        margin-right: initial;
+      }
+    }
+
+    @include media-max-width-padmini {
+      margin-bottom: 16px;
+      width: 50%;
+
+      a {
+        margin-left: 25px;
+      }
+    }
+
+  }
+
+  &__middle-tablet {
+    display: none;
+    @include media-max-width-padmini {
+      display: flex;
+      align-items: center;
+
+      .footer__middle-copy {
+        margin-top: initial;
+        margin-right: 30px;
+      }
+    }
+    @include media-max-width-mobile {
+      flex-wrap: wrap;
+      .footer__middle-copy {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .footer__middle-list-lower {
+      @include media-max-width-mobile {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__middle-list-upper {
+    display: flex;
+    margin-bottom: 33px;
+    @include media-max-width-padmini {
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      justify-content: space-between;
+      position: relative;
+      left: 60px;
+    }
+
+    @include media-max-width-mobile {
+      width: 100%;
+      position: static;
+
+      a {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__middle-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-max-width-mobile {
+      flex-wrap: wrap;
+    }
+
+    .footer__middle-copy {
+      @include media-max-width-padmini {
+        display: none;
+      }
+    }
+
+    .footer__middle-list-lower {
+      @include media-max-width-padmini {
+        display: none;
+      }
+    }
+  }
+
+  &__middle-left {
+    max-width: 400px;
+
+    @include media-max-width-pad {
+      max-width: 270px;
+    }
+    @include media-max-width-padmini {
+      flex-shrink: 0;
+      width: 198px;
+    }
+  }
+
+  &__middle-copy {
+    margin-top: 25px;
+  }
+
+  &__middle {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  &__upper {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: $primary-medium;
+  }
+
+  &__upper-list {
+    display: flex;
+    @include media-max-width-padmini {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__upper-menu {
+    width: 100%;
+    max-width: 200px;
+    @include media-max-width-padmini {
+      margin-bottom: 32px;
+    }
+
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &:nth-child(3n+3) {
+      @include media-max-width-padmini {
+        margin-right: 0;
+      }
+
+      @include media-max-width-mobile {
+        margin-right: 16px;
+      }
+    }
+
+    &:first-child {
+      margin-right: 32px;
+
+      @include media-max-width-padmini {
+        margin-right: 16px;
+      }
+    }
+
+    li {
+      margin-bottom: 12px;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+}

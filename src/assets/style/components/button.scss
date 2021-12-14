@@ -1,0 +1,79 @@
+.button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px 23px 15px 23px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  word-break: break-word;
+  cursor: pointer;
+  background-color: $primary-dark;
+  color: $white;
+  transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  &:hover {
+    background-color: $primary-medium;
+  }
+
+  &:active {
+    background-color: $primary-dark-2;
+  }
+
+  &_transparent {
+    background-color: transparent;
+    color: $primary-dark;
+
+    &:hover {
+      border: 1px solid $primary-light;
+      background-color: transparent;
+
+    }
+
+    &:active {
+      border: 1px solid $primary-dark;
+    }
+  }
+
+  &_red {
+    background-color: $secondary-red;
+
+    &:hover {
+      background-color: $secondary-red-light;
+    }
+
+    &:active {
+      background-color: $secondary-red-dark;
+    }
+  }
+
+  &_register {
+    border: 1px solid $primary-dark;
+  }
+
+  &_login {
+    background-color: $background;
+    color: $primary-dark;
+
+    &:hover {
+      border: 1px solid $primary-light;
+      background-color: $primary-light;
+      color: $white;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $primary-medium;
+    }
+  }
+}

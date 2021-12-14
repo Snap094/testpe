@@ -1,0 +1,18 @@
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "defaults";
+
+@import "pages/main";
+@import "pages/how-it-works";
+@import "pages/payment-methods";
+@import "pages/footer";
+
+@import "components/header";
+@import "components/button";
+@import "components/select";
+@import "components/input";
+@import "components/header-mobile";
+
